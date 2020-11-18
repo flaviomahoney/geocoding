@@ -19,6 +19,10 @@
         <td><%= link_to 'Show', flat %></td>
         <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
         <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div id="map"
+            style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </tr>
     <% end %>
   </tbody>
